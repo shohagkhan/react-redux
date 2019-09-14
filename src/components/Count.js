@@ -5,14 +5,15 @@ export class Count extends Component {
     render() {
         return (
             <div>
-                <h2>{this.props.countHere}</h2>
+                {/* I think 'this' need for class component */}
+                <h2>{this.props.count}</h2>
             </div>
         )
     }
 }
 
 const mapStateToProps = (state) => ({
-    countHere: state.count
+    count: state.count
 })
 
 const mapDispatchToProps = {
